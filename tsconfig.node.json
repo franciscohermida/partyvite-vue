@@ -6,7 +6,9 @@
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*",
-    "eslint.config.*"
+    "eslint.config.*",
+    // Is this the correct place for this?
+    "worker/**/*"
   ],
   "compilerOptions": {
     "noEmit": true,

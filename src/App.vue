@@ -1,47 +1,30 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import PartySocket from 'partysocket'
+import { onUnmounted } from 'vue'
+
+const ws = new PartySocket({
+  host: 'localhost:5173/',
+  room: 'room1',
+  party: 'my-server',
+})
+
+ws.send('hello from the client!')
+
+const controller = new AbortController()
+ws.addEventListener(
+  'message',
+  (message) => {
+    console.log('message from server:', message.data)
+  },
+  controller,
+)
+onUnmounted(() => {
+  controller.abort()
+})
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <h1>Hello, browser!</h1>
+  </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
