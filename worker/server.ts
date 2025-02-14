@@ -1,12 +1,7 @@
-import { type Connection, Server, routePartykitRequest } from 'partyserver'
-import { ExecutionContext, type ExportedHandler } from '@cloudflare/workers-types'
-
-type Env = {
-  MyServer: MyServer
-}
+import { Server, type Connection, routePartykitRequest } from 'partyserver'
 
 export class MyServer extends Server<Env> {
-  onMessage(connection: Connection<unknown>, message: string) {
+  onMessage(connection: Connection, message: string) {
     console.log('message from client:', message)
     connection.send('hello from the server!')
   }
