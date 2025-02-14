@@ -2,7 +2,7 @@
 
 A (beta) starter template for 🎈 partyserver ⨉ ⚡️ vite ⨉ 💚 vue ⨉ 🌊 tailwindcss ⨉ ⛅️ cloudflare workers
 
-A Vue adaptation of Sunil Pai's [partyvite] (https://github.com/threepointone/partyvite) starter template
+A Vue adaptation of Sunil Pai's [partyvite](https://github.com/threepointone/partyvite) starter template
 
 ```sh
 npm create cloudflare@latest -- --template franciscohermida/partyvite-vue
