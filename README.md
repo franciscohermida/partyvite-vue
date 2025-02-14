@@ -13,3 +13,4 @@ npm create cloudflare@latest -- --template franciscohermida/partyvite-vue
 - change the name of the package (in `package.json`)
 - change the name of the worker (in `wrangler.json`)
 - change the title of the page in `index.html`
+- Run `pnpm run deploy` to deploy
