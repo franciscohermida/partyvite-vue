@@ -3,7 +3,7 @@ import PartySocket from 'partysocket'
 import { onUnmounted } from 'vue'
 
 const ws = new PartySocket({
-  host: 'localhost:5173/',
+  host: window.location.host,
   room: 'room1',
   party: 'my-server',
 })
