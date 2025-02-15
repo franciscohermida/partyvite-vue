@@ -8,6 +8,10 @@ A Vue adaptation of Sunil Pai's [partyvite](https://github.com/threepointone/par
 npm create cloudflare@latest -- --template franciscohermida/partyvite-vue
 ```
 
+## live demo
+
+[demo](https://my-party-server.boxofapps.workers.dev/)
+
 ## what next?
 
 - change the name of the package (in `package.json`)
