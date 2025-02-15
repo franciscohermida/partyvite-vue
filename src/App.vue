@@ -53,5 +53,13 @@ onUnmounted(() => {
     <div>
       <p>{{ serverMsg }}</p>
     </div>
+
+    <a
+      href="https://github.com/franciscohermida/partyvite-vue"
+      target="_blank"
+      class="text-blue-400 hover:text-blue-600 underline text-sm mt-4"
+    >
+      View on GitHub
+    </a>
   </div>
 </template>
